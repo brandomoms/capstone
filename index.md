@@ -21,5 +21,5 @@ Manually label training images | not started | ongoing, preliminary training set
 Train multiclass classifier and post preliminary results | not started | March 1
 Add map of Anchorage to this page with geotags for each camera | not started | March 8
 Automate process of scraping images from borealis broadband, performing classification, and updating geotag labels on the map | not started | March 21
-Tune classifier and add optimizations to improve accuracy and post final results | not started | End of semester
+Tune classifier and add optimizations to improve accuracy, post final results | not started | End of semester
 
