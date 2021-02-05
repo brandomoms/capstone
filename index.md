@@ -14,4 +14,5 @@ Sample image, Ship Creek Bridge (Downtown)
 
 ## Timeline
 Item | Status | Completion Date
+-----|--------|----------------
 fill | fill | fill
