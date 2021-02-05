@@ -1,37 +1,17 @@
-## Welcome to GitHub Pages
+## Road Condition Classification in Anchorage
 
-You can use the [editor on GitHub](https://github.com/brandomoms/capstone/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Project Overview
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The purpose of this project is to use openly available imagery to automatically determine winter road conditions (clear pavement, plowed, slush, snow, ice, etc.). Classification will be done using a Convolutional Neural Net trained on the image set. 
 
-### Markdown
+Once the classifier is trained, an automated process will be created to regularly pull images from their source, run the classification, and update a map of Anchorage (to be added to this page) to display road conditions at various sites. 
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Data
+The data will come from street cameras hosted by Borealis Broadband, and will include images of the Potter's Marsh weigh station, at least three downtown sites, and at least one midtown site. Most of these cameras capture new images as frequently as once every five minutes. This is very useful as it means 1) a large volume of data can be scraped 2) this high temporal resolution can provide a lot of useful information e.g. how pixel values change for an image of a plowed street during a snow storm.
 
-```markdown
-Syntax highlighted code block
+![Image](https://webcams.borealisbroadband.net/shipcreek/shipcreekmega.jpg)
+Sample image, Ship Creek Bridge (Downtown)
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/brandomoms/capstone/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Timeline
+Item | Status | Completion Date
+fill | fill | fill
