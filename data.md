@@ -19,15 +19,15 @@ The classes are not mutually exclusive, any image may be tagged as 1 or more of 
 
 Examples:
 1. Track
-![Image](example_images/track.jpg)
+![Image](class_examples/track.jpg)
 2. Snow/Slush
-![Image](example_images/snowslush.jpg)
+![Image](class_examples/snowslush.jpg)
 3. Ice
-![Image](example_images/ice.jpg)
+![Image](class_examples/ice.jpg)
 5. Clear
-![Image](example_images/clear.jpg)
+![Image](class_examples/clear.jpg)
 6. Unknown
-![Image](example_images/unknown.jpg)
+![Image](class_examples/unknown.jpg)
 
 
 **Current data set**  
