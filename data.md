@@ -18,7 +18,7 @@ The different classes were selected based on how easily the images could be visu
 The classes are not mutually exclusive, any image may be tagged as 1 or more of the above classes.
 
 
-**Current data set** 
+**Current data set**  
 Currently there are 452 usable (not labelled as unknown) training images, but over half of them are images of roads with track. I want to assemble a training set that is equally representative of each class, so I intend to collect more images of icy and clear roads so that I can have at least 150 images per class.
 
   
