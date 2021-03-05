@@ -7,7 +7,7 @@ The data was collected from street cameras hosted by Borealis Broadband which ar
 
 The images from the cameras have a resolution of 960 X 1280 pixels, where each pixel is 3 bytes (1 byte per color channel).
 
-**Classes** 
+**Classes**  
 The different classes were selected based on how easily the images could be visually categorized. For example, snow/slush are a single category because it is difficult to distinguish between the two in an image. The classes are:
 1. Track - Any other condition but with clear ruts in the road that expose either pavement or black ice
 2. Snow/Slush
@@ -16,6 +16,18 @@ The different classes were selected based on how easily the images could be visu
 5. Unknown - images that could not be classified. These are not used in training or analysis.
 
 The classes are not mutually exclusive, any image may be tagged as 1 or more of the above classes.
+
+Examples:
+1. Track
+![Image](example_images/track.jpg)
+2. Snow/Slush
+![Image](example_images/snowslush.jpg)
+3. Ice
+![Image](example_images/ice.jpg)
+5. Clear
+![Image](example_images/clear.jpg)
+6. Unknown
+![Image](example_images/unknown.jpg)
 
 
 **Current data set**  
