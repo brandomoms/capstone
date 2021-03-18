@@ -43,4 +43,4 @@ Each image is a 3D array of pixel values, with a red, green, and blue channel. T
 Scatter plot of the mean pixel values for each channel, grouped by class. Each point represents an image in the dataset. Since the classes are not mutually exclusive, certain images may be represented by multiple points in a given plot.
 
 ![Image](plots/var.png)
-Scatter plot of the variance of the pixel values for each channel, grouped by class. Each point represents an image in the dataset. Since the classes are not mutually exclusive, certain images may be represented by multiple points in a given plot.
+*Scatter plot of the variance of the pixel values for each channel, grouped by class. Each point represents an image in the dataset. Since the classes are not mutually exclusive, certain images may be represented by multiple points in a given plot.*
