@@ -7,6 +7,9 @@ The data was collected from street cameras hosted by Borealis Broadband which ar
 
 The images from the cameras have a resolution of 960 X 1280 pixels, where each pixel is 3 bytes (1 byte per color channel).
 
+**Procedure for data collection**
+A mask was created for each camera to exclude all pixels falling outside of the actual road. This is to ensure that any analysis is of the road surface itself and not the surrounding area. Additionally, this will help to mitigate the machine learning model from learning misleading heuristics based on non-essential infromation in each camera's field of view, and not the actual road surface condition.
+
 **Classes**  
 The different classes were selected based on how easily the images could be visually categorized. For example, snow/slush are a single category because it is difficult to distinguish between the two in an image. The classes are:
 1. Track - Any other condition but with clear ruts in the road that expose either pavement or black ice
@@ -42,5 +45,14 @@ Each image is a 3D array of pixel values, with a red, green, and blue channel. T
 ![Image](plots/mean.png)  
 **Fig. 2** Scatter plot of the mean pixel values for each channel, grouped by class. Each point represents an image in the dataset. Since the classes are not mutually exclusive, certain images may be represented by multiple points in a given plot.
 
+Based on the distribution of mean pixel values in the dataset, the following ovservations were made:
+1. The TRACK and SNOW/SLUSH classes are very similar across all channels. This could imply that it may be difficult to distinguish between these classes when performing classification.
+1. The ICE and CLEAR labelled images have lower average pixel values than other images. This makes sense since the dark pavement is exposed for these types of images.
+
 ![Image](plots/var.png)  
 **Fig. 3** Scatter plot of the variance of the pixel values for each channel, grouped by class. Each point represents an image in the dataset. Since the classes are not mutually exclusive, certain images may be represented by multiple points in a given plot.
+
+Based on the distribution of pixel variance in the dataset, the following ovservations were made:
+1. The TRACK and SNOW/SLUSH classes are very similar across all channels, as is the case with the mean. This further suggest potential diffuculty in distinguishing between these classes.
+1. Images in the ICE class have notably lower pixel variance than any other class. It also shows the most variation in variance between channels, the lowest being the blue channel with one notable outlier.
+
