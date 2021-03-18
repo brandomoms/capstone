@@ -34,4 +34,13 @@ Examples:
 Currently there are 452 usable (not labelled as unknown) training images, but over half of them are images of roads with track. I want to assemble a training set that is equally representative of each class, so I intend to collect more images of icy and clear roads so that I can have at least 150 images per class. This task is ongoing and weather dependent.
 
 ![Image](plots/bar.png)
-Distribution of images by class in current workin data set
+Distribution of images by class in current working data set
+
+**Analysis**
+Each image is a 3D array of pixel values, with a red, green, and blue channel. The task ahead is to use this information to make a determination for a given image based on these pixel values. To better understand how the different channels correlate with each of the classes, the mean and variance of pixel values were calculated for each image and added to the dataset (in stats.csv these columns have names like red_mean, green_var, etc.).
+
+![Image](plots/mean.png)
+Scatter plot of the mean pixel values for each channel, grouped by class. Each point represents an image in the dataset. Since the classes are not mutually exclusive, certain images may be represented by multiple points in a given plot.
+
+![Image](plots/var.png)
+Scatter plot of the variance of the pixel values for each channel, grouped by class. Each point represents an image in the dataset. Since the classes are not mutually exclusive, certain images may be represented by multiple points in a given plot.
