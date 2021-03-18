@@ -47,7 +47,7 @@ Each image is a 3D array of pixel values, with a red, green, and blue channel. T
 
 Based on the distribution of mean pixel values in the dataset, the following ovservations were made:
 1. The TRACK and SNOW/SLUSH classes are very similar across all channels. This could imply that it may be difficult to distinguish between these classes when performing classification.
-1. The ICE and CLEAR labelled images have lower average pixel values than other images. This makes sense since the dark pavement is exposed for these types of images.
+1. The ICE and CLEAR labelled images have lower average pixel values than other images. This makes sense since the dark pavement is exposed for these types of images and lower pixel values signify darker coloration.
 
 ![Image](plots/var.png)  
 **Fig. 3** Scatter plot of the variance of the pixel values for each channel, grouped by class. Each point represents an image in the dataset. Since the classes are not mutually exclusive, certain images may be represented by multiple points in a given plot.
