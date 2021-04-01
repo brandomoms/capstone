@@ -9,4 +9,4 @@ Once the classifier is trained, an automated process will be created to regularl
 
 1. [Project schedule](docs/schedule.md)
 2. [Data](docs/data.md)
-3. [Classification](docs/classification.md)
+<!--3. [Classification](docs/classification.md)-->
