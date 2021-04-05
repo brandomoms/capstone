@@ -36,23 +36,22 @@ Examples:
 **Current data set**  
 Currently there are 452 usable (not labelled as unknown) training images, but over half of them are images of roads with track. I want to assemble a training set that is equally representative of each class, so I intend to collect more images of icy and clear roads so that I can have at least 150 images per class. This task is ongoing and weather dependent.
 
-![Image](plots/bar.png)
+![Image](../plots/bar.png)
 **Fig. 1** Distribution of images by class in current working data set
 
 ## Analysis
 Each image is a 3D array of pixel values, with a red, green, and blue channel. The task ahead is to use this information to make a determination for a given image based on these pixel values. To better understand how the different channels correlate with each of the classes, the mean and variance of pixel values were calculated for each image and added to the dataset (in stats.csv these columns have names like red_ave, green_var, etc.).
 
-![Image](plots/mean.png)  
+![Image](../plots/mean.png)  
 **Fig. 2** Scatter plot of the mean pixel values for each channel, grouped by class. Each point represents an image in the dataset. Since the classes are not mutually exclusive, certain images may be represented by multiple points in a given plot.
 
 Based on the distribution of mean pixel values in the dataset, the following observations were made:
 1. The TRACK and SNOW/SLUSH classes are very similar across all channels. This could imply that it may be difficult to distinguish between these classes when performing classification.
 1. The ICE and CLEAR labelled images have lower average pixel values than other images. This makes sense since the dark pavement is exposed for these types of images and lower pixel values signify darker coloration.
 
-![Image](plots/var.png)  
+![Image](../plots/var.png)  
 **Fig. 3** Scatter plot of the variance of the pixel values for each channel, grouped by class. Each point represents an image in the dataset. Since the classes are not mutually exclusive, certain images may be represented by multiple points in a given plot.
 
 Based on the distribution of pixel variance in the dataset, the following observations were made:
 1. The TRACK and SNOW/SLUSH classes are very similar across all channels, as is the case with the mean. This further suggest potential diffuculty in distinguishing between these classes.
 1. Images in the ICE class have notably lower pixel variance than any other class. It also shows the most variation in variance between channels, the lowest being the blue channel with one notable outlier.
-
