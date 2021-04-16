@@ -1,0 +1,174 @@
+<html>
+<head>
+<title> test map </title>
+
+<style type="text/css">
+        #map {
+            width: 750px;
+            height: 500px;
+        }
+</style>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4b8yZurn3L_HgWQ_NuMQ-3vdtZZyK4Aw&sensor=false"></script>
+<script type="text/javascript">
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init()
+    {
+        var mapOptions = {
+            zoom: 11,
+            panControl: true,
+            zoomControl: true,
+            center: new google.maps.LatLng(61.1910421, -149.8217485),
+            //
+            styles: [
+            {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [
+                {
+                    "color": "#000000"}, {
+                    "lightness": 17}]}, {
+                "featureType": "landscape",
+                "elementType": "geometry",
+                "stylers": [
+                {
+                    "color": "#000000"}, {
+                    "lightness": 20}]}, {
+                "featureType": "road.highway",
+                "elementType": "geometry.fill",
+                "stylers": [
+                {
+                    "color": "#000000"}, {
+                    "lightness": 17}]}, {
+                "featureType": "road.highway",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                {
+                    "color": "#000000"}, {
+                    "lightness": 29}, {
+                    "weight": 0.2}]}, {
+                "featureType": "road.arterial",
+                "elementType": "geometry",
+                "stylers": [
+                {
+                    "color": "#000000"}, {
+                    "lightness": 18}]}, {
+                "featureType": "road.local",
+                "elementType": "geometry",
+                "stylers": [
+                {
+                    "color": "#000000"}, {
+                    "lightness": 16}]}, {
+                "featureType": "poi",
+                "elementType": "geometry",
+                "stylers": [
+                {
+                    "color": "#000000"}, {
+                    "lightness": 21}]}, {
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                {
+                    "visibility": "on"}, {
+                    "color": "#000000"}, {
+                    "lightness": 16}]}, {
+                "elementType": "labels.text.fill",
+                "stylers": [
+                {
+                    "saturation": 36}, {
+                    "color": "#000000"}, {
+                    "lightness": 40}]}, {
+                "elementType": "labels.icon",
+                "stylers": [
+                {
+                    "visibility": "off"}]}, {
+                "featureType": "transit",
+                "elementType": "geometry",
+                "stylers": [
+                {
+                    "color": "#000000"}, {
+                    "lightness": 19}]}, {
+                "featureType": "administrative",
+                "elementType": "geometry.fill",
+                "stylers": [
+                {
+                    "color": "#000000"}, {
+                    "lightness": 20}]}, {
+                "featureType": "administrative",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                {
+                    "color": "#000000"}, {
+                    "lightness": 17}, {
+                    "weight": 1.2}]}]
+        };
+
+        var mapElement = document.getElementById('map');
+
+        var myMap = new google.maps.Map(mapElement, mapOptions);
+
+        //var pos = new google.maps.LatLng(33.524385, -12.048899);
+        locations = [new google.maps.LatLng(61.1910421,-149.8217485), new google.maps.LatLng(61.1364491,-149.9217426)]
+        locations.forEach( (loc) =>
+            {
+                const marker = new google.maps.Marker({
+                        map: myMap,
+                        draggable: false,
+                        animation: google.maps.Animation.DROP,
+                        position: loc
+                });
+
+                const infowindow = new google.maps.InfoWindow({
+                    content: 'ur a butt',
+                });
+
+                marker.addListener("click", () => {
+                    infowindow.open(myMap, marker);
+                });
+            }
+        );
+    }
+
+    // function infoBoxCreator() {
+    //
+    //   var raInfoBoxElement = document.createElement('div');
+    //
+    //   var infoBoxInfo = document.createElement('div');
+    //   infoBoxInfo.className = 'infobox_content';
+    //   infoBoxInfo.innerHTML = 'Text In My Infobox';
+    //
+    //   raInfoBoxElement.appendChild(raNameElement);
+    //
+    //   var infoBoxText = raInfoBoxElement;
+    //
+    //   plotMarker(infoBoxText);
+    // }
+    //
+    //
+    // function plotMarker(infoBoxText) {
+    //
+    //   var coordinate = new google.maps.LatLng(someLAT, someLONG);
+    //   var infowindow = new google.maps.InfoWindow();
+    //
+    // // Create the marker
+    //   var marker = new google.maps.Marker({
+    //     map: map,
+    //     position: coordinate
+    //   });
+    // }
+    //
+    // // Create Info window and destroy any other open infowindows
+    // google.maps.event.addListener(marker, "click", function() {
+    //     if (infowindow)
+    //         infowindow.close();
+    //     infowindow = new google.maps.InfoWindow({content: infoBoxText});
+    //     infowindow.open(map, marker);
+    // });
+
+</script>
+</head>
+<body>
+
+<div id="map"> </div>
+</body>
+</html>
